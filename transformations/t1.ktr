@@ -1169,6 +1169,60 @@
     </GUI>
   </step>
   <step>
+    <name>Drop 'Pessoa Física' como fornecedor</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Text file output</send_true_to>
+    <send_false_to>Dummy (do nothing) 2</send_false_to>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <conditions>
+              <condition>
+                <negated>N</negated>
+                <leftvalue>TipoFornecedor</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>Integer</type>
+                  <text>1</text>
+                  <length>-1</length>
+                  <precision>0</precision>
+                  <isnull>N</isnull>
+                  <mask>####0;-####0</mask>
+                </value>
+              </condition>
+            </conditions>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>256</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Drop 'Simples Consulta'</name>
     <type>FilterRows</type>
     <description/>
@@ -1243,6 +1297,31 @@
     </GUI>
   </step>
   <step>
+    <name>Dummy (do nothing) 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>816</xloc>
+      <yloc>400</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
     <name>Metadata Correction</name>
     <type>SelectValues</type>
     <description/>
@@ -1256,111 +1335,84 @@
     <fields>
       <field>
         <name>﻿AnoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>MesAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>DataAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoRegiao</name>
-        <rename/>
       </field>
       <field>
         <name>Regiao</name>
-        <rename/>
       </field>
       <field>
         <name>UF</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>GrupoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>GrupoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>SexoConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>FaixaEtariaConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>CEPConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>TipoFornecedor</name>
-        <rename/>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
-        <rename/>
       </field>
       <field>
         <name>NomeFantasiaSindec</name>
-        <rename/>
       </field>
       <field>
         <name>CNPJ</name>
-        <rename/>
       </field>
       <field>
         <name>RadicalCNPJ</name>
-        <rename/>
       </field>
       <field>
         <name>RazaoSocialRFB</name>
-        <rename/>
       </field>
       <field>
         <name>NomeFantasiaRFB</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoCNAEPrincipal</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoCNAEPrincipal</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1851,111 +1903,84 @@
     <fields>
       <field>
         <name>﻿AnoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>MesAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>DataAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoRegiao</name>
-        <rename/>
       </field>
       <field>
         <name>Regiao</name>
-        <rename/>
       </field>
       <field>
         <name>UF</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>GrupoAssunto</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>GrupoProblema</name>
-        <rename/>
       </field>
       <field>
         <name>SexoConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>FaixaEtariaConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>CEPConsumidor</name>
-        <rename/>
       </field>
       <field>
         <name>TipoFornecedor</name>
-        <rename/>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
-        <rename/>
       </field>
       <field>
         <name>NomeFantasiaSindec</name>
-        <rename/>
       </field>
       <field>
         <name>CNPJ</name>
-        <rename/>
       </field>
       <field>
         <name>RadicalCNPJ</name>
-        <rename/>
       </field>
       <field>
         <name>RazaoSocialRFB</name>
-        <rename/>
       </field>
       <field>
         <name>NomeFantasiaRFB</name>
-        <rename/>
       </field>
       <field>
         <name>CodigoCNAEPrincipal</name>
-        <rename/>
       </field>
       <field>
         <name>DescricaoCNAEPrincipal</name>
-        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -2586,38 +2611,38 @@
       <field>
         <name>﻿AnoAtendimento</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>MesAtendimento</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>DataAtendimento</name>
@@ -2627,21 +2652,21 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
+        <trim_type>both</trim_type>
         <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>CodigoRegiao</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>Regiao</name>
@@ -2651,8 +2676,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>5</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2663,21 +2688,21 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>2</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
@@ -2687,21 +2712,21 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>39</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>CodigoAssunto</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>DescricaoAssunto</name>
@@ -2711,8 +2736,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>98</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2723,21 +2748,21 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>98</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>CodigoProblema</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>DescricaoProblema</name>
@@ -2747,8 +2772,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>109</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2759,8 +2784,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>50</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2771,8 +2796,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>1</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2783,8 +2808,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>18</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2795,21 +2820,21 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>10</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
         <name>TipoFornecedor</name>
         <type>Integer</type>
-        <format>#</format>
+        <format>0</format>
         <currency>£</currency>
         <decimal>.</decimal>
         <group>,</group>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
-        <precision>0</precision>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
@@ -2819,8 +2844,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>50</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2831,8 +2856,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>37</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2843,8 +2868,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2855,8 +2880,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2867,8 +2892,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>85</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2879,8 +2904,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>42</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2891,8 +2916,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>15</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
       <field>
@@ -2903,8 +2928,8 @@
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
-        <length>111</length>
+        <trim_type>both</trim_type>
+        <length>-1</length>
         <precision>-1</precision>
       </field>
     </fields>
@@ -2919,85 +2944,6 @@
     <GUI>
       <xloc>1008</xloc>
       <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Drop 'Pessoa Física' como fornecedor</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Text file output</send_true_to>
-    <send_false_to>Dummy (do nothing) 2</send_false_to>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>TipoFornecedor</leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>Integer</type>
-                  <text>1</text>
-                  <length>-1</length>
-                  <precision>0</precision>
-                  <isnull>N</isnull>
-                  <mask>####0;-####0</mask>
-                </value>
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>816</xloc>
-      <yloc>256</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Dummy (do nothing) 2</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>816</xloc>
-      <yloc>400</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
