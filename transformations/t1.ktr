@@ -467,28 +467,43 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Drop 'Pessoa Física' como fornecedor</from>
-      <to>Text file output</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>2021 CSV Input</from>
-      <to>Trata CEPConsumidor</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Trata CEPConsumidor</from>
       <to>Metadata Correction 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>2019 CSV Input</from>
+      <from>Trata CEPConsumidor 2019</from>
+      <to>Metadata Correction</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2021 CSV Input</from>
+      <to>GetDia</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>GetDia</from>
+      <to>Trata CEPConsumidor</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>GetDia 2</from>
       <to>Trata CEPConsumidor 2019</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Trata CEPConsumidor 2019</from>
-      <to>Metadata Correction</to>
+      <from>Drop 'Pessoa Física' como fornecedor</from>
+      <to>Drop 'TipoFornecedor'</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Drop 'TipoFornecedor'</from>
+      <to>Text file output</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>2019 CSV Input</from>
+      <to>GetDia 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -825,7 +840,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>192</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1163,7 +1178,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>64</xloc>
+      <xloc>192</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1179,7 +1194,7 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <send_true_to>Text file output</send_true_to>
+    <send_true_to>Drop 'TipoFornecedor'</send_true_to>
     <send_false_to>Dummy (do nothing) 2</send_false_to>
     <compare>
       <condition>
@@ -1217,8 +1232,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>256</yloc>
+      <xloc>720</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1266,8 +1281,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>256</yloc>
+      <xloc>720</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1291,8 +1306,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>640</xloc>
-      <yloc>400</yloc>
+      <xloc>496</xloc>
+      <yloc>448</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1316,8 +1331,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>816</xloc>
-      <yloc>400</yloc>
+      <xloc>496</xloc>
+      <yloc>576</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1335,84 +1350,115 @@
     <fields>
       <field>
         <name>﻿AnoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>MesAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>DataAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoRegiao</name>
+        <rename/>
       </field>
       <field>
         <name>Regiao</name>
+        <rename/>
       </field>
       <field>
         <name>UF</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>SexoConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>FaixaEtariaConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>CEPConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>TipoFornecedor</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaSindec</name>
+        <rename/>
       </field>
       <field>
         <name>CNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RadicalCNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialRFB</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaRFB</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoCNAEPrincipal</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoCNAEPrincipal</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DiaAtendimento</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -1874,6 +1920,23 @@
         <currency_symbol/>
         <storage_type>normal</storage_type>
       </meta>
+      <meta>
+        <name>DiaAtendimento</name>
+        <rename>DiaAtendimento</rename>
+        <type>Integer</type>
+        <length>16</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1884,7 +1947,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>592</xloc>
       <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1903,84 +1966,115 @@
     <fields>
       <field>
         <name>﻿AnoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>MesAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>DataAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoRegiao</name>
+        <rename/>
       </field>
       <field>
         <name>Regiao</name>
+        <rename/>
       </field>
       <field>
         <name>UF</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>SexoConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>FaixaEtariaConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>CEPConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>TipoFornecedor</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaSindec</name>
+        <rename/>
       </field>
       <field>
         <name>CNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RadicalCNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialRFB</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaRFB</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoCNAEPrincipal</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoCNAEPrincipal</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DiaAtendimento</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
       <meta>
@@ -2442,6 +2536,23 @@
         <currency_symbol/>
         <storage_type>normal</storage_type>
       </meta>
+      <meta>
+        <name>DiaAtendimento</name>
+        <rename>DiaAtendimento</rename>
+        <type>Integer</type>
+        <length>16</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -2452,7 +2563,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>592</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2471,84 +2582,111 @@
     <fields>
       <field>
         <name>﻿AnoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>TrimestreAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>MesAtendimento</name>
+        <rename/>
       </field>
       <field>
-        <name>DataAtendimento</name>
+        <name>DiaAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoRegiao</name>
+        <rename/>
       </field>
       <field>
         <name>Regiao</name>
+        <rename/>
       </field>
       <field>
         <name>UF</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoTipoAtendimento</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoAssunto</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>GrupoProblema</name>
+        <rename/>
       </field>
       <field>
         <name>SexoConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>FaixaEtariaConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>CEPConsumidor</name>
+        <rename/>
       </field>
       <field>
         <name>TipoFornecedor</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialSindec</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaSindec</name>
+        <rename/>
       </field>
       <field>
         <name>CNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RadicalCNPJ</name>
+        <rename/>
       </field>
       <field>
         <name>RazaoSocialRFB</name>
+        <rename/>
       </field>
       <field>
         <name>NomeFantasiaRFB</name>
+        <rename/>
       </field>
       <field>
         <name>CodigoCNAEPrincipal</name>
+        <rename/>
       </field>
       <field>
         <name>DescricaoCNAEPrincipal</name>
+        <rename/>
       </field>
       <select_unspecified>N</select_unspecified>
     </fields>
@@ -2561,7 +2699,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>512</xloc>
+      <xloc>720</xloc>
       <yloc>256</yloc>
       <draw>Y</draw>
     </GUI>
@@ -2645,12 +2783,12 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>DataAtendimento</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd HH:mm:ss.SSS</format>
+        <name>DiaAtendimento</name>
+        <type>Integer</type>
+        <format>0</format>
         <currency/>
-        <decimal/>
-        <group/>
+        <decimal>.</decimal>
+        <group>,</group>
         <nullif/>
         <trim_type>both</trim_type>
         <length>-1</length>
@@ -2825,18 +2963,6 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>TipoFornecedor</name>
-        <type>Integer</type>
-        <format>0</format>
-        <currency>£</currency>
-        <decimal>.</decimal>
-        <group>,</group>
-        <nullif/>
-        <trim_type>both</trim_type>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
         <name>RazaoSocialSindec</name>
         <type>String</type>
         <format/>
@@ -2942,8 +3068,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>1008</xloc>
-      <yloc>256</yloc>
+      <xloc>720</xloc>
+      <yloc>832</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -3006,7 +3132,7 @@ if (CEPConsumidor != null){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>448</xloc>
       <yloc>320</yloc>
       <draw>Y</draw>
     </GUI>
@@ -3070,8 +3196,235 @@ if (CEPConsumidor != null){
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
+      <xloc>448</xloc>
       <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>GetDia</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var DiaAtendimento = getDayNumber(DataAtendimento,"m")
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>DiaAtendimento</name>
+        <rename>DiaAtendimento</rename>
+        <type>Integer</type>
+        <length>16</length>
+        <precision>0</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>320</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>GetDia 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>
+      <jsScript>
+        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>var DiaAtendimento = getDayNumber(DataAtendimento,"m")
+
+
+
+</jsScript_script>
+      </jsScript>
+    </jsScripts>
+    <fields>
+      <field>
+        <name>DiaAtendimento</name>
+        <rename>DiaAtendimento</rename>
+        <type>Integer</type>
+        <length>16</length>
+        <precision>0</precision>
+        <replace>N</replace>
+      </field>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>304</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Drop 'TipoFornecedor'</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>﻿AnoAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>TrimestreAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>MesAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DiaAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CodigoRegiao</name>
+        <rename/>
+      </field>
+      <field>
+        <name>Regiao</name>
+        <rename/>
+      </field>
+      <field>
+        <name>UF</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CodigoTipoAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DescricaoTipoAtendimento</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CodigoAssunto</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DescricaoAssunto</name>
+        <rename/>
+      </field>
+      <field>
+        <name>GrupoAssunto</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CodigoProblema</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DescricaoProblema</name>
+        <rename/>
+      </field>
+      <field>
+        <name>GrupoProblema</name>
+        <rename/>
+      </field>
+      <field>
+        <name>SexoConsumidor</name>
+        <rename/>
+      </field>
+      <field>
+        <name>FaixaEtariaConsumidor</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CEPConsumidor</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RazaoSocialSindec</name>
+        <rename/>
+      </field>
+      <field>
+        <name>NomeFantasiaSindec</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CNPJ</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RadicalCNPJ</name>
+        <rename/>
+      </field>
+      <field>
+        <name>RazaoSocialRFB</name>
+        <rename/>
+      </field>
+      <field>
+        <name>NomeFantasiaRFB</name>
+        <rename/>
+      </field>
+      <field>
+        <name>CodigoCNAEPrincipal</name>
+        <rename/>
+      </field>
+      <field>
+        <name>DescricaoCNAEPrincipal</name>
+        <rename/>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>720</xloc>
+      <yloc>704</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
