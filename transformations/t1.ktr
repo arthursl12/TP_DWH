@@ -3213,9 +3213,7 @@
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-if (CEPConsumidor != null){
+        <jsScript_script>if (CEPConsumidor != null){
 	
 	var str = String(CEPConsumidor)
 	var len = str.length
@@ -3277,9 +3275,7 @@ if (CEPConsumidor != null){
       <jsScript>
         <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>//Script here
-
-if (CEPConsumidor != null){
+        <jsScript_script>if (CEPConsumidor != null){
 	
 	var str = String(CEPConsumidor)
 	var len = str.length
